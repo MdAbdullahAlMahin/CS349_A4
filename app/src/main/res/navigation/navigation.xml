@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/navigation" app:startDestination="@id/courselistView">
+
+    <fragment android:id="@+id/courselistView"
+              android:name="com.example.a4.views.CourselistView"
+              android:label="CourselistView">
+        <action android:id="@+id/action_courselistView_to_courseAdd" app:destination="@id/courseAdd"/>
+        <action android:id="@+id/action_courselistView_to_courseEdit" app:destination="@id/courseEdit"/>
+    </fragment>
+    <fragment android:id="@+id/courseEdit" android:name="com.example.a4.views.CourseEdit" android:label="CourseEdit">
+        <action android:id="@+id/action_courseEdit_to_courselistView" app:destination="@id/courselistView"/>
+    </fragment>
+    <fragment android:id="@+id/courseAdd" android:name="com.example.a4.views.CourseAdd" android:label="CourseAdd">
+        <action android:id="@+id/action_courseAdd_to_courselistView" app:destination="@id/courselistView"/>
+    </fragment>
+</navigation>
